@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-let userEnquirySchema = mongoose.Schema({
+let userSchema = mongoose.Schema({
   name: {
     required: true,  // Corrected property
     type: String      // Use String instead of "string"
@@ -21,6 +21,6 @@ let userEnquirySchema = mongoose.Schema({
   }
 });
 
-let enquiryModel = mongoose.model("enquiry", userEnquirySchema);
+let enquiryModel = mongoose.model("enquiry", userSchema);
 
 module.exports = enquiryModel;
